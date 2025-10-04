@@ -1,0 +1,37 @@
+### Obtener todos los teatros/cines
+# Llama al endpoint GET /theater
+# Devuelve un arreglo con todos los teatros registrados
+GET http://localhost:3000/theater
+
+### Obtener teatro por ID
+# Llama al endpoint GET /theater/:id
+# En este caso, busca el teatro con id = 1
+GET http://localhost:3000/theater/1
+
+### Crear un teatro
+# Llama al endpoint POST /theater
+# Crea un nuevo teatro con los datos enviados en formato JSON
+POST http://localhost:3000/theater
+Content-Type: application/json
+{
+    "id": 1,
+    "nombre": "Cinepolis Galerías",
+    "ubicacion": "Guadalajara, Jalisco",
+    "capacidad": 500
+}
+
+### Crear otro teatro
+# Igual que el anterior, pero con un id distinto
+POST http://localhost:3000/theater
+Content-Type: application/json
+{
+    "id": 2,
+    "nombre": "Cinema Lumiere",
+    "ubicacion": "Ciudad de México #3 21 / 4 Col. Centro",
+    "capacidad": 300
+}
+
+### Eliminar teatro por ID
+# Llama al endpoint DELETE /theater/:id
+# En este caso, elimina el teatro con id = 1
+DELETE http://localhost:3000/theater/1

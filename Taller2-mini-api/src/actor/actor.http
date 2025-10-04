@@ -1,0 +1,37 @@
+### Obtener todos los actores
+# Llama al endpoint GET /actor
+# Devuelve un arreglo con todos los actores almacenados en memoria
+GET http://localhost:3000/actor
+
+### Obtener actor por ID
+# Llama al endpoint GET /actor/:id
+# En este caso, busca al actor con id = 1 pero puede cambiarse el ID en la URL
+GET http://localhost:3000/actor/1
+
+### Crear un actor
+# Llama al endpoint POST /actor
+# Crea un nuevo actor con los datos enviados en formato JSON
+POST http://localhost:3000/actor
+Content-Type: application/json
+{
+    "id": 1,
+    "nombre": "Leonardo DiCaprio",
+    "fechaNacimiento": "1974-11-11",
+    "nacionalidad": "Estadounidense"
+}
+
+### Crear otro actor
+# Similar al anterior, pero crea un segundo actor con un id diferente
+POST http://localhost:3000/actor
+Content-Type: application/json
+{
+    "id": 2,
+    "nombre": "Meryl Streep",
+    "fechaNacimiento": "1949-06-22",
+    "nacionalidad": "Estadounidense"
+}
+
+### Eliminar actor por ID
+# Llama al endpoint DELETE /actor/:id
+# En este caso, elimina al actor con id = 1 pero puede cambiarse el ID en la URL
+DELETE http://localhost:3000/actor/1
